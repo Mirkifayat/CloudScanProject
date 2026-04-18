@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 10000
 
 # Start the application using Gunicorn (Better for cloud than Flask's built-in server)
-CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:$PORT app:app"]
+CMD ["gunicorn", "--timeout", "100", "app:app"]
