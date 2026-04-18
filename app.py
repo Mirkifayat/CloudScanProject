@@ -36,7 +36,7 @@ def scan():
         
         # Using -F (Fast), -Pn (No Ping), and --script=vuln for Cyber depth
        # Added -T4 for speed and -max-retries to stop Nmap from trying too hard on blocked ports
-        command = ["nmap", "-sT", "-F", "-Pn", "-sV", "-T4", "--max-retries", "1", "--script=vuln", target]
+        command = ["nmap", "-sT", "-F", "-Pn", "-sV", "-T4", "--max-retries", "1", "--script=default", target]
         
         # Timeout set to 150 seconds because 'vuln' scripts take time
         result = subprocess.run(command, capture_output=True, text=True, timeout=150)
