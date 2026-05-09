@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudScan | Vulnerability Scanner</title>
+    <title>Sovereign Cyber-Shield | Future-Proofing Kashmir</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Cloud<span>Scan</span></h1>
-            <p>Cloud-Based Network Reconnaissance Tool</p>
-            <h2>"For educational purposes only"</h2>
-            <h3><span>WARNING:"Use only on networks you own or have explicit permission to audit."</span></h3>
+            <h1>Sovereign <span>Cyber-Shield</span></h1>
+            <p>Enterprise-Grade Security & Brand Protection for MSMEs</p>
         </header>
 
         <div class="search-box">
-            <input type="text" id="target" placeholder="Enter Target IP or Domain (e.g., 8.8.8.8)">
-            <button id="scan-btn" onclick="startScan()">Run Scan</button>
+            <input type="text" id="target" placeholder="Enter Business Domain (e.g., yourbusiness.com)">
+            <button id="scan-btn" onclick="startScan()">Analyze Business Risk</button>
         </div>
 
         <div id="loader" class="hidden">
-    <div class="spinner"></div>
-    <p>Running Deep Vulnerability Scan...</p>
-    <p style="font-size: 0.8em; color: gray;">(This usually takes 60-120 seconds for security scripts to finish)</p>
-</div>
+            <div class="spinner"></div>
+            <p>Running Threat Intelligence & Infrastructure Scan...</p>
+        </div>
 
-        <div id="result-container" class="hidden">
-            <h3>Scan Results</h3>
-            <pre id="output"></pre>
+        <div id="result-container" class="hidden dashboard">
+            
+            <div class="score-card">
+                <h2>Cyber-Resilience Score</h2>
+                <div id="score-circle" class="score">--</div>
+                <p id="score-message"></p>
+            </div>
+
+            <div class="modules">
+                <div class="module-card">
+                    <h3>🌐 Web-Surface Exposures</h3>
+                    <ul id="web-output"></ul>
+                </div>
+
+                <div class="module-card">
+                    <h3>🛡️ Brand Impersonation (Typosquatting)</h3>
+                    <ul id="brand-output"></ul>
+                </div>
+            </div>
+
+            <div class="terminal-card">
+                <h3>🖥️ Raw Infrastructure Data (For IT/Devs)</h3>
+                <pre id="output"></pre>
+            </div>
         </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
